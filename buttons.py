@@ -20,3 +20,20 @@ def loc_button():
     #Добавляем кнопку в пространство
     kb.add(location)
     return kb
+
+
+#Кнопки для админ-панели
+def admin_buttons():
+    #Создаем пространство
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    #Создаем сами кнопки
+    add_pr = types.KeyboardButton('Добавить продукт')
+    del_pr = types.KeyboardButton('Удалить продукт')
+    edit_pr = types.KeyboardButton('Изменить количество продукта')
+    to_menu = types.KeyboardButton('На главную')
+    #Объединяем кнопки с пространством
+    kb.add(add_pr, edit_pr, del_pr)
+    kb.row(to_menu)
+    return kb
+
+    #
